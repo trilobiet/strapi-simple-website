@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/snippets",
+      "handler": "Snippet.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/snippets/count",
+      "handler": "Snippet.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/snippets/:id",
+      "handler": "Snippet.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/snippets",
+      "handler": "Snippet.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/snippets/:id",
+      "handler": "Snippet.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/snippets/:id",
+      "handler": "Snippet.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

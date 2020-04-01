@@ -1,0 +1,98 @@
+{
+  "connection": "default",
+  "collectionName": "article",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "text"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "index": {
+      "type": "integer"
+    },
+    "cssClass": {
+      "maxLength": 100,
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "nextArticle": {
+      "model": "article",
+      "via": "prevArticle"
+    },
+    "prevArticle": {
+      "model": "article",
+      "via": "nextArticle"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "publish": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "hasMenuItem": {
+      "type": "boolean"
+    },
+    "externalLink": {
+      "type": "string"
+    },
+    "spotlight": {
+      "type": "boolean"
+    },
+    "language": {
+      "enum": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "NL"
+      ],
+      "type": "enumeration",
+      "enumDefault": "EN"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "articles",
+      "dominant": true
+    },
+    "topicLead": {
+      "type": "boolean"
+    },
+    "params": {
+      "type": "string"
+    },
+    "snippets": {
+      "collection": "snippet"
+    },
+    "topics": {
+      "collection": "topic",
+      "dominant": true,
+      "via": "articles"
+    }
+  }
+}

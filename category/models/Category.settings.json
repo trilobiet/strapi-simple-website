@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "category",
+  "info": {
+    "name": "category",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "enum": [
+        "DEPOSIT",
+        "FUNDERS",
+        "RESEARCHERS",
+        "LIBRARIANS",
+        "NONE",
+        "PUBLISHERS",
+        "RESOURCES",
+        "SEARCH"
+      ],
+      "enumDefault": "FUNDERS",
+      "type": "enumeration"
+    },
+    "articles": {
+      "collection": "article",
+      "via": "categories"
+    }
+  }
+}
