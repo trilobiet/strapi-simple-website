@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sections",
+  "info": {
+    "name": "Section",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2,
+      "unique": true
+    },
+    "groupNumber": {
+      "type": "integer"
+    },
+    "index": {
+      "type": "integer"
+    },
+    "publish": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "hasMenuItem": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "translations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "default.translations"
+    },
+    "description": {
+      "type": "text"
+    },
+    "topics": {
+      "via": "sections",
+      "collection": "topic"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "snippets",
+  "info": {
+    "name": "Snippet"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

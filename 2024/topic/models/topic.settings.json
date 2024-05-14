@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topics",
+  "info": {
+    "name": "Topic",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "index": {
+      "type": "integer",
+      "default": 0
+    },
+    "hasMenuItem": {
+      "type": "boolean",
+      "default": true
+    },
+    "groupHeader": {
+      "type": "string"
+    },
+    "publish": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "translations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "default.translations"
+    },
+    "description": {
+      "type": "text"
+    },
+    "articleDisplay": {
+      "type": "enumeration",
+      "enum": [
+        "Show_first_article",
+        "Show_lead_article_and_list_titles",
+        "Show_list_of_titles",
+        "Show_list_of_summaries",
+        "Show_list_of_articles"
+      ],
+      "default": "Show_first_article"
+    },
+    "cssClass": {
+      "type": "string"
+    },
+    "params": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "topic",
+        "faq"
+      ],
+      "default": "topic",
+      "required": true
+    },
+    "sections": {
+      "via": "topics",
+      "collection": "section",
+      "dominant": true
+    },
+    "articles": {
+      "via": "topics",
+      "collection": "article"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    }
+  }
+}

@@ -8,10 +8,12 @@ Topics can be assigned to 0-n Sections.
 
 Additional data types: Categories and Snippets.
 
-Stapi targeted version: *v3.0.0-beta.17.8*
+Stapi targeted version: 
+- 2020 *v3.0.0-beta.17.8*
+- 2024 *v3.6.8*
 
 
-### Slug support
+### Slug support (v3.0.0-beta.17.8 only)
 
 Article and Topic require node-crc.
 

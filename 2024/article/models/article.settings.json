@@ -1,0 +1,126 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "summary": {
+      "type": "text"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "index": {
+      "type": "integer"
+    },
+    "cssClass": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "nextArticle": {
+      "via": "prevArticle",
+      "model": "article"
+    },
+    "prevArticle": {
+      "via": "nextArticle",
+      "model": "article"
+    },
+    "publish": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "hasMenuItem": {
+      "type": "boolean"
+    },
+    "externalLink": {
+      "type": "string"
+    },
+    "spotlight": {
+      "type": "boolean"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "DE",
+        "EN",
+        "ES",
+        "FR",
+        "IT",
+        "NL"
+      ],
+      "default": "EN"
+    },
+    "topicLead": {
+      "type": "boolean"
+    },
+    "params": {
+      "type": "string"
+    },
+    "snippets": {
+      "collection": "snippet"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "articles",
+      "dominant": true
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "references": {
+      "type": "text"
+    },
+    "resources": {
+      "type": "text"
+    },
+    "sources": {
+      "type": "string"
+    },
+    "topics": {
+      "via": "articles",
+      "collection": "topic",
+      "dominant": true
+    },
+    "grouping": {
+      "type": "enumeration",
+      "enum": [
+        "Articles",
+        "FAQs",
+        "Glossary"
+      ],
+      "default": "Articles"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    }
+  }
+}
