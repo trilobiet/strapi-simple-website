@@ -1,0 +1,27 @@
+{
+  "collectionName": "groups_translations",
+  "info": {
+    "name": "Translations",
+    "icon": "comment-dots"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "languageCode": {
+      "type": "enumeration",
+      "enum": [
+        "DE",
+        "FR",
+        "NL",
+        "ES",
+        "IT"
+      ],
+      "default": "DE"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

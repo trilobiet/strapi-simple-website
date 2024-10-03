@@ -8,6 +8,12 @@ Topics can be assigned to 0-n Sections.
 
 Additional data types: Categories and Snippets.
 
+Installation:    
+
+- Copy data types directories (article, category, ... etc.) to `api` folder;
+- Copy `components` to root folder (same parent as `api`);
+- Restart Strapi
+
 Stapi targeted version: 
 - 2020 *v3.0.0-beta.17.8*
 - 2024 *v3.6.8*
