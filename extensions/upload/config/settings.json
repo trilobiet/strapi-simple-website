@@ -1,0 +1,20 @@
+{
+  "provider": "aws-s3-sharp-resize",
+    "providerOptions": {
+      "accessKeyId": "XXXXXXXXXXXXXXXXXXXX",
+      "secretAccessKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "endpoint": "xxxxx.upcloudobjects.com",
+      "optimize": {
+        "resize": false,
+        "width": 1000,
+        "height": 1000
+      },
+      "settings": {
+        "awsUploadFolder": "uploads"
+      },
+      "params": {
+        "Bucket": "[bucketname]"
+      }
+   }
+}
+
